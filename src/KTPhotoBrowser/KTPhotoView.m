@@ -21,11 +21,6 @@
 @synthesize scroller = scroller_;
 @synthesize index = index_;
 
-- (void)dealloc 
-{
-   [imageView_ release], imageView_ = nil;
-   [super dealloc];
-}
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -43,7 +38,7 @@
 - (void)loadSubviewsWithFrame:(CGRect)frame
 {
    imageView_ = [[UIImageView alloc] initWithFrame:frame];
-   [imageView_ setContentMode:UIViewContentModeScaleAspectFit];
+   [imageView_ setContentMode:UIViewContentModeScaleAspectFill];
    [self addSubview:imageView_];
 }
 
@@ -136,8 +131,7 @@
 }
 
 
-#pragma mark -
-#pragma mark UIScrollViewDelegate Methods
+#pragma mark - UIScrollViewDelegate Methods
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
@@ -146,8 +140,7 @@
 }
 
 
-#pragma mark -
-#pragma mark Methods called during rotation to preserve the zoomScale and the visible portion of the image
+#pragma mark - Methods called during rotation to preserve the zoomScale and the visible portion of the image
 
 - (void)setMaxMinZoomScalesForCurrentBounds
 {

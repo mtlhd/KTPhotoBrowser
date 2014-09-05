@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @class KTPhotoView;
-@class KTThumbView;
 
 @protocol KTPhotoBrowserDataSource <NSObject>
 @required
@@ -23,7 +22,6 @@
 
 // …or these, for asynchronous images.
 - (void)imageAtIndex:(NSInteger)index photoView:(KTPhotoView *)photoView;
-- (void)thumbImageAtIndex:(NSInteger)index thumbView:(KTThumbView *)thumbView;
 
 - (void)deleteImageAtIndex:(NSInteger)index;
 - (void)exportImageAtIndex:(NSInteger)index;

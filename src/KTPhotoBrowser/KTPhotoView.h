@@ -14,7 +14,7 @@
 @interface KTPhotoView : UIScrollView <UIScrollViewDelegate>
 {
    UIImageView *imageView_;
-   KTPhotoScrollViewController *scroller_;
+
    NSInteger index_;
 }
 
