@@ -116,6 +116,10 @@ const CGFloat ktkDefaultToolbarHeight = 44;
     [super viewDidDisappear:animated];
 }
 
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    [self layoutScrollViewSubviews];
+}
+
 #pragma mark Private Methods
 
 - (void)setTitleWithCurrentPhotoIndex
